@@ -4,20 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87a37353-3905-44c7-9e98-19e71d5bc179" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gpt-from-scratch.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/Scripts/python3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.venv/pyvenv.cfg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/dataset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/tokenizer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/attention.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/embeddings.py" afterDir="false" />
+    <list default="true" id="87a37353-3905-44c7-9e98-19e71d5bc179" name="Changes" comment="Adding data packages, embedding and attention from model">
+      <change afterPath="$PROJECT_DIR$/model/feedforward.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/gpt.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/normalization.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/model/transformer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +24,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "volhahalavach"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/volhahalavach/llm_from_scratch.git",
+    "accountId": "05fed95d-9c15-4c60-837d-78984e83a6fa"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 3,
   "fromUser": false
@@ -53,11 +62,13 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.jshint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.jshint": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
@@ -77,8 +88,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785780557596</updated>
-      <workItem from="1785780558444" duration="21424000" />
+      <workItem from="1785780558444" duration="29122000" />
     </task>
+    <task id="LOCAL-00001" summary="Adding data packages, embedding and attention from model">
+      <option name="closed" value="true" />
+      <created>1785944329125</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1785944329125</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +114,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding data packages, embedding and attention from model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding data packages, embedding and attention from model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
