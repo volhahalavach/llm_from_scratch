@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="87a37353-3905-44c7-9e98-19e71d5bc179" name="Changes" comment="Adding data packages, embedding and attention from model">
-      <change afterPath="$PROJECT_DIR$/model/feedforward.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/gpt.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/normalization.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/transformer.py" afterDir="false" />
+    <list default="true" id="87a37353-3905-44c7-9e98-19e71d5bc179" name="Changes" comment="Adding model components - normalization, feedforward, transformer and GPTModel class combining the entire model">
+      <change afterPath="$PROJECT_DIR$/data/tokens_converter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train/loss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/tokenizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/tokenizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1785780557596</updated>
-      <workItem from="1785780558444" duration="29122000" />
+      <workItem from="1785780558444" duration="32417000" />
     </task>
     <task id="LOCAL-00001" summary="Adding data packages, embedding and attention from model">
       <option name="closed" value="true" />
@@ -98,7 +99,15 @@
       <option name="project" value="LOCAL" />
       <updated>1785944329125</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Adding model components - normalization, feedforward, transformer and GPTModel class combining the entire model">
+      <option name="closed" value="true" />
+      <created>1786027530287</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786027530287</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,7 +126,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding data packages, embedding and attention from model" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding data packages, embedding and attention from model" />
+    <MESSAGE value="Adding model components - normalization, feedforward, transformer and GPTModel class combining the entire model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding model components - normalization, feedforward, transformer and GPTModel class combining the entire model" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

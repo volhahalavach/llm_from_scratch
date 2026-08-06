@@ -41,10 +41,3 @@ if __name__ == '__main__':
     idx = embeddings(inputs)
     print(idx.shape)
     print(idx)
-
-
-# Note: I've commented #allowed_special={"<|endoftext|>"}) in GPTDataset - take a look
-
-
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
