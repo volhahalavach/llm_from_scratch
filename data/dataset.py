@@ -7,7 +7,8 @@ class GPTDataset(Dataset):
         self.target_ids = []
 
         # convert text into tokens
-        token_ids = tokenizer.encode(txt, allowed_special={"<|endoftext|>"})
+        token_ids = tokenizer.encode(txt)#, allowed_special={"<|endoftext|>"})
+        #print(len(token_ids))
         assert len(token_ids) > max_length, "Number of tokenized inputs must at least be equal to max_length+1"
 
         # moving with sliding window=max_length to shape inputs and targets

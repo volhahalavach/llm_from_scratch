@@ -1,0 +1,79 @@
+The sun rose above the mountains.
+The air was cool and fresh.
+Birds began to sing in the trees.
+People slowly woke up.
+The village became full of life.
+
+A cat sat on the wooden fence.
+The dog watched quietly.
+Neither animal wanted to fight.
+They simply observed each other.
+Soon they both fell asleep in the warm sunshine.
+
+Alice enjoyed reading books.
+She visited the library every Saturday.
+Her favorite topics were mathematics and astronomy.
+She believed that learning never ends.
+Every new book opened another world.
+
+Bob loved programming.
+He wrote Python every day.
+He enjoyed solving difficult problems.
+Sometimes his code contained bugs.
+Careful testing helped him find mistakes.
+
+Artificial intelligence is changing many industries.
+Machine learning allows computers to learn from data.
+Neural networks consist of many connected neurons.
+Transformers use the attention mechanism.
+Large language models are based on transformer architectures.
+
+The Earth revolves around the Sun.
+The Moon revolves around the Earth.
+Gravity keeps planets in orbit.
+The solar system contains eight planets.
+
+Water freezes at zero degrees Celsius.
+Ice melts when heated.
+Water boils at one hundred degrees Celsius.
+Steam rises into the air.
+
+A healthy lifestyle includes exercise.
+Balanced nutrition is important.
+Sleep helps the brain recover.
+Regular movement improves health.
+
+Python is a popular programming language.
+It is easy to learn.
+Many scientists use Python for data analysis.
+Engineers use it for machine learning.
+Developers build web applications with Python.
+
+Coffee contains caffeine.
+Tea also contains caffeine.
+Many people drink coffee in the morning.
+Others prefer tea.
+
+A transformer processes tokens in parallel.
+Each token attends to every other token.
+Attention computes relationships between words.
+The model combines this information.
+The output becomes a contextual representation.
+
+The quick brown fox jumps over the lazy dog.
+The dog barked loudly.
+The fox disappeared into the forest.
+
+Winter is cold.
+Spring brings flowers.
+Summer is warm.
+Autumn is colorful.
+
+A bicycle has two wheels.
+A car usually has four wheels.
+Both are used for transportation.
+
+The student studied every evening.
+The exam was difficult.
+Preparation increased confidence.
+Hard work often leads to success.

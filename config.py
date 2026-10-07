@@ -5,3 +5,4 @@ class GPTConfig:
     n_heads = 12
     n_layers = 12
     dropout = 0.1
+    qkv_bias = False

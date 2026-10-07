@@ -1,6 +1,6 @@
-import normalization
-import attention
-import feedforward
+import model.normalization
+import model.attention
+import model.feedforward
 
 import torch
 import torch.nn as nn
@@ -8,16 +8,16 @@ import torch.nn as nn
 class TransformerBlock(nn.Module):
   def __init__(self, config):
     super().__init__()
-    self.attn = attention.MultiHeadAttention(
+    self.attn = model.attention.MultiHeadAttention(
         d_in=config.emb_dim,
         d_out=config.emb_dim,
         context_length=config.context_length,
-        num_heads=config.num_heads,
+        num_heads=config.n_heads,
         dropout=config.dropout,
         qkv_bias=config.qkv_bias)
-    self.feed_fwd=feedforward.FeedForward(config)
-    self.norm_attn = normalization.LayerNorm(config.emb_dim)
-    self.norm_ffd = normalization.LayerNorm(config.emb_dim)
+    self.feed_fwd = model.feedforward.FeedForward(config)
+    self.norm_attn = model.normalization.LayerNorm(config.emb_dim)
+    self.norm_ffd = model.normalization.LayerNorm(config.emb_dim)
     self.drop_shortcut = nn.Dropout(config.dropout)
 
   def forward(self, x):

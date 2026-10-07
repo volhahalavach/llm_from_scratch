@@ -20,20 +20,23 @@ class GPTEmbedding(nn.Module):
 
         self.token_embedding = nn.Embedding(config.vocab_size, config.emb_dim)
 
-        # pos_emb - encode the position of the token in the text.
+        # pos_emb - encode the position of the token within the context window.
         # In GPT model absolute position is used, but can be also relative
         # in other models. It's a randomly initialized matrix of size length of the embedding=emb_dim
         # and for each token in the text sample=context_length - batch row. The position is spread
         # along the batch, i.e. the same pos is added to each row in the batch
+        # After each training loop, in other words after the model makes forward
+        # and backward passes for each batch, pos_emb is updates, receives its gradient,
+        # and this updated pos_emb is used for the next batch
         self.position_embedding = nn.Embedding(config.context_length, config.emb_dim)
 
         self.dropout = nn.Dropout(config.dropout)
 
     def forward(self, x):
         """
-                input_ids: (batch_size, seq_length)
+                input_ids: (batch_size, content_length)
                         Returns:
-                                embeddings: (batch_size, seq_length, emb_dim)
+                                embeddings: (batch_size, content_length, emb_dim)
                 """
 
         batch_size, content_length = x.shape
@@ -52,7 +55,7 @@ class GPTEmbedding(nn.Module):
         position_embeddings = self.position_embedding(positions)
 
         # Broadcasting:
-        # (batch_size, seq_length, emb_dim)
+        # (batch_size, content_length, emb_dim)
         embeddings = token_embeddings + position_embeddings
 
         return self.dropout(embeddings)

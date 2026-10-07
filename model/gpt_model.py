@@ -1,18 +1,18 @@
 import torch.nn as nn
 
-import transformer
-import normalization
-import embeddings
+import model.transformer
+import model.normalization
+import model.embeddings
 
 class GPTModel(nn.Module):
   def __init__(self, config):
     super().__init__()
-    self.embeddings = embeddings.GPTEmbedding(config)
+    self.embeddings = model.embeddings.GPTEmbedding(config)
 
     self.transformer_blocks = nn.Sequential(
-        *[transformer.TransformerBlock(config) for _ in range(config.n_heads)]    )
+        *[model.transformer.TransformerBlock(config) for _ in range(config.n_heads)]    )
 
-    self.final_norm = normalization.LayerNorm(config.emb_dim)
+    self.final_norm = model.normalization.LayerNorm(config.emb_dim)
 
     self.out_head = nn.Linear(config.emb_dim, config.vocab_size, bias=False)
 
