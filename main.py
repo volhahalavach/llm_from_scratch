@@ -5,7 +5,8 @@ import config
 import model.gpt_model
 import torch
 import train.training
-from analyse import  plot
+from analyse import plot_losses
+import save_n_load.save_n_load as s_n_l
 
 
 #from datasets import list_datasets, load_dataset
@@ -61,42 +62,15 @@ if __name__ == '__main__':
         train_dataloader,
         val_dataloader,
         optimizer,
-        num_epochs=2,
+        num_epochs=1,
         device=device,
-        eval_freq=5,
+        eval_freq=10,
         eval_iter=1,
         start_context="Love is",
         tokenizer=tokenizer
     )
 
+    s_n_l.save(my_model, "model.pth")
+
     epochs_tensor = torch.linspace(0, 2, len(train_loss))
-    plot.plot_losses(epochs_tensor, train_loss, val_loss, tokens_seen)
-
-
-
-
-
-
-
-    """tokenizer = GPTTokenizer()
-    config = config.GPTConfig()
-    dataset = GPTDataset(input_text, tokenizer, config.context_length, config.context_length)
-    batch_size = 8
-    dataloader = DataLoader(
-        dataset,
-        batch_size=batch_size,
-        shuffle=False,
-        drop_last=False
-    )
-    data_iter = iter(dataloader)
-    inputs, targets = next(data_iter)
-    print(inputs.shape)
-    print(targets.shape)
-
-    embeddings = GPTEmbedding(config)
-    idx = embeddings(inputs)
-    print(idx.shape)
-    print(idx)"""
-
-
-
+    plot_losses.plot_losses(epochs_tensor, train_loss, val_loss, tokens_seen)

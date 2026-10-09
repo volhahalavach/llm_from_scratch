@@ -4,9 +4,13 @@ import train.generate
 
 #train model
 def train_model(model, train_loader, val_loader, optimizer, device, num_epochs,
-                       eval_freq, eval_iter, start_context, tokenizer):
+                       eval_freq, eval_iter, start_context, tokenizer,
+                min_delta=0.001, patience=10):
   train_losses, val_losses, track_tokens_seen = [], [], []
   tokens_seen, global_step = 0, -1
+  best_val_loss = float('inf')  #the best validation loss within last iteration to compare with the current one
+  iter_without_improvement = 0 # number of iterations without improvement of val loss
+
 
   for epoch in range(num_epochs):
     model.train()
@@ -26,6 +30,18 @@ def train_model(model, train_loader, val_loader, optimizer, device, num_epochs,
         val_losses.append(val_loss)
         track_tokens_seen.append(tokens_seen)
         print(f"Ep {epoch+1} (Step {global_step:06d}): Train loss {train_loss:.3f}, Val loss {val_loss:.3f}")
+
+        # adding tolerance to the training process to
+        # track when val loss stops improving
+        if val_loss < best_val_loss-min_delta:
+          best_val_loss = val_loss
+          iter_without_improvement = 0
+        else:
+          iter_without_improvement += 1
+
+        if iter_without_improvement >= patience:
+          print("Early stopping: validation loss stopped improving")
+          return train_losses, val_losses, track_tokens_seen
 
     train.generate.generate_and_print_text(model, tokenizer, device, start_context)
 
